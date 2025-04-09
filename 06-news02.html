@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <script>
+        // 定义 Car 类
+        class Car {
+            constructor(make, model, year) {
+                this.make = make;
+                this.model = model;
+                this.year = year;
+            }
+            // 定义 start 方法
+            start() {
+                console.log(`${this.make} ${this.model} 启动了`);
+            }
+        }
+
+        // 定义 ElectricCar 类，继承自 Car 类
+        class ElectricCar extends Car {
+            constructor(make, model, year, range) {
+                super(make, model, year);
+                this.range = range;
+            }
+            // 定义 charge 方法
+            charge() {
+                console.log(`${this.make} ${this.model} 正在充电`);
+            }
+        }
+
+        // 实例化 ElectricCar 对象
+        let myElectricCar = new ElectricCar("Tesla", "Model S", 2020, 300);
+        myElectricCar.start();
+        myElectricCar.charge();
+
+        // 回调函数练习
+        console.log('11111111');
+
+        setTimeout(function () {
+            console.log('22222222');
+        }, 1000);
+
+        console.log('33333333');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
