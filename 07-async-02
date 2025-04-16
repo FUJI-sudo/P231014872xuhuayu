@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hy"
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,0">
+    <title>Javascript 异步编程练习</title>
+</head>
+
+<body>
+    <h1>Java script 异步编程练习</h1>
+    <div id="demo"
+
+    </div>
+    <script>
+        async function getSomething(){
+            await setTimeout(function () {
+                console.log('11111')               
+            }, 2000);
+        }
+        gotSomething()
+        console.log('222222')
+        async function getLastPushedDate(owner, repo) {
+               const url = 'https://api.github.com/repos/${owner}/${repo}'}
+               try {
+                const response = await fetch(url);
+                if {!response.ok} {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                // pushed_at 字段即为最后一次推送日期
+                return data.pushed_at;
+               } catch (error) {
+                console.error('Error fetching data:', error);
+                return null
+            } 
+    </script>
+</body>

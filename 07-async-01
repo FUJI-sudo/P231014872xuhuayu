@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hy"
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,0">
+    <title>Javascript 异步编程练习</title>
+</head>
+
+<body>
+    <h1>Java script 异步编程练习</h1>
+    <div id="demo"
+
+    </div>
+    <script>
+        async function getSomething(){
+            await setTimeout(function () {
+                console.log('11111')               
+            }, 2000);
+        }
+        gotSomething()
+        console.log('222222')
+    </script>       // 定义 Car 类
+</body>
