@@ -1,38 +1,60 @@
 <!DOCTYPE html>
-<html lang="hy"
-
+<html lang="hy">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Javascript 异步编程练习</title>
 </head>
 
 <body>
-    <h1>Java script 异步编程练习</h1>
-    <div id="demo"
-
-    </div>
+    <h1>JavaScript 异步编程练习</h1>
+    <div id="demo"></div>
+    <table id="dateTable">
+        <thead>
+            <tr>
+                <th>仓库所有者</th>
+                <th>仓库名称</th>
+                <th>最后推送日期</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
     <script>
         async function getSomething(){
-            await setTimeout(function () {
-                console.log('11111')               
-            }, 2000);
+            // 这里使用 setTimeout 模拟异步操作
+            await new Promise(resolve => setTimeout(resolve, 2000)); 
+            console.log('11111');               
         }
-        gotSomething()
-        console.log('222222')
+        getSomething();
+        console.log('222222');
+
         async function getLastPushedDate(owner, repo) {
-               const url = 'https://api.github.com/repos/${owner}/${repo}'}
-               try {
+            const url = `https://api.github.com/repos/${owner}/${repo}`;
+            try {
                 const response = await fetch(url);
-                if {!response.ok} {
+                if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
                 const data = await response.json();
-                // pushed_at 字段即为最后一次推送日期
-                return data.pushed_at;
-               } catch (error) {
+                const pushedAt = data.pushed_at;
+                // 将数据添加到表格
+                const tableBody = document.querySelector('#dateTable tbody');
+                const newRow = tableBody.insertRow();
+                const ownerCell = newRow.insertCell(0);
+                const repoCell = newRow.insertCell(1);
+                const dateCell = newRow.insertCell(2);
+                ownerCell.textContent = owner;
+                repoCell.textContent = repo;
+                dateCell.textContent = pushedAt;
+                return pushedAt;
+            } catch (error) {
                 console.error('Error fetching data:', error);
-                return null
+                return null;
             } 
+        }
+
+        // 调用函数，可替换为实际的仓库所有者和名称
+        getLastPushedDate('FUJI-sudo', 'P231014872xuhuayu');
     </script>
 </body>
+</html>
