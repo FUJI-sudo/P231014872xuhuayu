@@ -4,17 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript 基础练习</title>
     <script>
-        let a = 10
-        const title = '不变的值'
-        // alert(title)
-        let b = '10'
-        console.log( a== b)
+        let a = 10;
+        const title = '常量值示例';
+        // alert(title);
+        let b = '10';
+        console.log(a == b);
+        console.log(a === b);
+        console.log(a + b);
+        console.log(a + Number(b));
+        let age = 18;
+        if (age >= 14) {
+            console.log('您已成年');
+        } else {
+            console.log('您未成年');
+        }
+        for (let i = 0; i < 10; i++) {
+            console.log(i);
+        }
+        let hug = 70;
+        while (hug > 0) {
+            console.log('hug');
+            hug = hug - 10;
+        }
+        // 定义函数 sayhello
+        function sayhello() {
+            console.log('你好');
+        }
+        // 调用函数时保持大小写一致
+        sayhello();
+        // 正确定义函数，函数名不能有空格
+        function sayHello() {
+            console.log('您好!');
+        }
+        sayHello();
     </script>
 </head>
 
-<body>
+<body style="background-color: #f5f5f5; color: #333;">
 
 </body>
 
