@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 面向对象练习</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        p {
+            color: #6c757d;
+        }
+    </style>
+    <script>
+        // 类和对象
+        // 1. 定义一个学生类
+        class Student {
+            // 构造函数
+            constructor(name, age, school, grade) {
+                this.name = name;
+                this.age = age;
+                this.school = school;
+                this.grade = grade;
+            }
+            // 方法
+            learn(subject = "数学") {
+                console.log(`${this.name}正在学习${subject}课程`);
+            }
+            exam() {
+                console.log(`${this.name}正在参加考试`);
+            }
+        }
+        // 2. 创建对象实例
+        let student1 = new Student("张三", 8, "第一小学", 2);
+        student1.learn("英语");
+        student1.exam();
+
+        class Undergraduate extends Student {
+            constructor(name, age, school, grade, major, experience) {
+                super(name, age, school, grade);
+                this.major = major;
+                this.experience = experience;
+            }
+
+            intern(corp) {
+                console.log(`${this.name}在${corp}公司实习`);
+                console.log(super.exam())
+            }
+        }
+
+        let student2 = new Undergraduate("李四", 20, "理工大学", 3, "计算机科学", 0);
+        student2.intern("阿里巴巴");
+
+        // 异步回调示例
+        console.log("开始执行");
+
+        setTimeout(function () { console.log("1秒后执行") }, 1000);
+
+        console.log("继续执行");
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <h1 id="demo" onclick="alert('点击事件触发！')">页面标题</h1>
+    <div>
+        <p id="anotherp">页面内容区域</p>
+    </div>
+
+    <script>
+        let titleElement = document.getElementById("demo");
+        console.log(titleElement);
+        // 1. 改变元素的内容
+        titleElement.innerHTML = "动态更新的标题内容";
+        // 2. 改变元素的样式
+        titleElement.style.color = "#28a745";
+
+        let paragraph = document.getElementById("anotherp");
+        paragraph.onclick = function () {
+            alert("欢迎访问！");
+        }
+
+        window.onload = function () {
+            alert("页面已完全加载");
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>相对定位与绝对定位</title>
+  <style type="text/css">
+    body {
+      width: 960px;
+      margin: 0 auto;
+      font-family: 微软雅黑;
+      font-size: 18px;
+      line-height: 1.8em;
+    }
+
+    div {
+      width: 300px;
+      float: left;
+    }
+
+    .relative {
+      position: relative;
+      top: 100px;
+    }
+
+    .absolute {
+      position: absolute;
+      top: 80px;
+    }
+
+    .bg {
+      background-color: #fcc;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h2>正常信息流</h2>
+    <p>阳光正好，在草地上悠然地看着云朵变幻形状。</p>
+    <p>微风轻拂，带来花草的芬芳。</p>
+    <p class="bg">沉浸在这美好的时光里，忘却了尘世的纷扰。</p>
+    <p>
+      也许此刻该感叹，这般惬意的时光多么珍贵！
+    </p>
+    <p>有时候，就该停下脚步享受这份宁静。</p>
+  </div>
+  <div>
+    <h2>相对定位</h2>
+    <p>页面元素好似悠悠云朵，在原本的位置附近小范围飘动。</p>
+    <p>既保持与其他元素的关联，又能展现独特的移动姿态。</p>
+    <p class="bg relative">这个元素采用相对定位，在原有位置下方移动 100px。</p>
+    <p>相对定位不会脱离文档流，其他元素位置不受影响。</p>
+    <p>在设计中可用于微调元素位置。</p>
+    <code>.relative { position: relative; top:100px;}</code>
+  </div>
+  <div>
+    <h2>绝对定位</h2>
+    <p>元素如同天空中的飞鸟，自由穿梭在页面之上。</p>
+    <p>完全脱离文档流，不受其他元素约束。</p>
+    <p class="bg absolute">这个元素采用绝对定位，距离顶部 80px。</p>
+    <p>定位基于最近的已定位祖先元素，若无则相对于文档。</p>
+    <p>常用于创建浮动效果和弹窗。</p>
+    <code>.absolute { position: absolute; top:80px;} </code>
+  </div>
+</body>
+
+</html>

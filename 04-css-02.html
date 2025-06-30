@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS 样式优化</title>
+  <style>
+    body {
+      background-color: #e9f7ef;
+    }
+
+    h1 {
+      background-image: url("./images/780.jpg");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      text-align: center;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS 核心知识：背景、盒模型、布局与动画</h1>
+  <h2>CSS 背景样式</h2>
+  <div>
+    “cascading” 一词发音为 /kæˈskeɪdɪŋ/，若需在 HTML 文件中添加音标，可参考当前内容示例。
+  </div>
+  <h2>CSS 盒模型详解</h2>
+  <div class="box">
+    盒模型是 CSS 布局的核心要素，它决定了页面元素的位置和尺寸。每个元素都可视为一个矩形盒子，由内容、内边距、边框和外边距构成。
+  </div>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      border: 2px solid #43a047;
+      padding: 20px;
+      margin-top: 3em;
+      border-radius: 5px;
+      background-color: #f1f8e9;
+    }
+  </style>
+  <h2>页面流、display 属性与定位</h2>
+  <ul>
+    <li>项目示例一</li>
+    <li>项目示例二</li>
+    <li>项目示例三</li>
+  </ul>
+  <ul>
+    <li style="display: inline">行内项目一</li>
+    <li style="display: inline">行内项目二</li>
+    <li style="display: inline">行内项目三</li>
+    <li style="display: none">隐藏项目</li>
+  </ul>
+  <h2>Flex 布局示例</h2>
+  <div class="flex-container">
+    <p>Flex 项目一</p>
+    <p>Flex 项目二</p>
+    <p>Flex 项目三</p>
+  </div>
+  <style>
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .flex-container p {
+      background-color: #dcedc8;
+      border: 1px solid #8bc34a;
+      margin-right: 1em;
+      padding: 5px;
+      color: #33691e;
+    }
+  </style>
+</body>
+
+</html>
